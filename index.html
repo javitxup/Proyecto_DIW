@@ -12,25 +12,30 @@
 
 <body>
    <header>
+      <h1>Universidad</h1>
        <nav></nav>
-       
    </header>
     <main>
        
-        <form action="." method="post">
-            <fieldset>
-                <label for="user" class="user">&nbsp;</label>
-                    <input type="text" name="user" placeholder="Usuario" id="user" required>
-               
-                <label for="pass" class="pass">&nbsp;</label>
-                    <input type="password" name="pass" placeholder="Contraseña" id="pass" required>
-                
-                   <label for="rem">Recordar</label>
-                    <input type="checkbox" name="rem" id="rem">
-
-                <button name="Enviar">Entrar</button>
-            </fieldset>
-        </form>
+        <div class="login">
+            <form action="." method="post">
+                <fieldset>
+                    <div>
+                        <label for="user" class="user">&nbsp;</label>
+                        <input type="text" name="user" placeholder="Usuario" id="user" required>
+                    </div>
+                    <div>
+                        <label for="pass" class="pass">&nbsp;</label>
+                        <input type="password" name="pass" placeholder="Contraseña" id="pass" required>
+                    </div>
+                    <div>
+                        <label for="rem">Recordar</label>
+                        <input type="checkbox" name="rem" id="rem">
+                    </div>
+                    <input type="submit" name="Enviar">
+                </fieldset>
+            </form>
+        </div>
     </main>
     <footer></footer>
 </body>

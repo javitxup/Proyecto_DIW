@@ -1,0 +1,29 @@
+/******** Variables **********/
+:root{
+    --color1:#630000;
+    --color2:#CCCCCC;
+    --color3:#FFFFFF; 
+}
+/********* contenido **************/
+body {
+    background: var(--color3);
+}
+nav {
+    background: var(--color1);
+}
+
+/****** Diseño del formulario de registro ******/
+.login fieldset {
+    background: var(--color2);
+    padding: 0;
+    padding-bottom: 1em;
+}
+.login div{
+    display: block;
+    padding: .5em .5em .5em 2em;
+}
+.login input[type="submit"] {
+    background-color: white;
+    padding: .5em;
+    border: none;
+}
