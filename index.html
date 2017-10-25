@@ -1,10 +1,38 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Ignacio Gómez&Javier Alonso">
     <title>Inicio</title>
+    <!--<link href="css/reset.css" type="text/css" rel="stylesheet" media="screen">-->
+    <link href="css/style.css" type="text/css" rel="stylesheet" media="screen">
 </head>
+
 <body>
-    <h1>Hola mundo</h1>
+   <header>
+       <nav></nav>
+       
+   </header>
+    <main>
+       
+        <form action="." method="post">
+            <fieldset>
+                <label for="user" class="user">&nbsp;</label>
+                    <input type="text" name="user" placeholder="Usuario" id="user" required>
+               
+                <label for="pass" class="pass">&nbsp;</label>
+                    <input type="password" name="pass" placeholder="Contraseña" id="pass" required>
+                
+                   <label for="rem">Recordar</label>
+                    <input type="checkbox" name="rem" id="rem">
+
+                <button name="Enviar">Entrar</button>
+            </fieldset>
+        </form>
+    </main>
+    <footer></footer>
 </body>
+
 </html>
