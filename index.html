@@ -6,12 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Ignacio Gómez&Javier Alonso">
     <title>Inicio</title>
-    <!--<link href="css/reset.css" type="text/css" rel="stylesheet" media="screen">-->
+    <link href="css/reset.css" type="text/css" rel="stylesheet" media="screen">
     <link href="css/style.css" type="text/css" rel="stylesheet" media="screen">
+    <link href="https://file.myfontastic.com/SwbQMKYJhED7MkhzNiw2qF/icons.css" rel="stylesheet">
+    
 </head>
 
 <body>
    <header>
+      <div class="icon-university"></div>
       <h1>Universidad</h1>
        <nav></nav>
    </header>
@@ -21,18 +24,20 @@
             <form action="." method="post">
                 <fieldset>
                     <div>
-                        <label for="user" class="user">&nbsp;</label>
+                        <label for="user" class="user"><div class="icon-user"></div></label>
                         <input type="text" name="user" placeholder="Usuario" id="user" required>
                     </div>
                     <div>
-                        <label for="pass" class="pass">&nbsp;</label>
+                        <label for="pass" class="pass"><div class="icon-unlock-alt"></div></label>
                         <input type="password" name="pass" placeholder="Contraseña" id="pass" required>
                     </div>
                     <div>
-                        <label for="rem">Recordar</label>
-                        <input type="checkbox" name="rem" id="rem">
+                      <label for="rem">
+                       <input type="checkbox" name="rem" id="rem">
+                        Recordar</label>
+                        
                     </div>
-                    <input type="submit" name="Enviar">
+                    <input type="submit" name="summit" value="Acceder">
                 </fieldset>
             </form>
         </div>
