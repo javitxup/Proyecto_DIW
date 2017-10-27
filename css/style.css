@@ -51,6 +51,11 @@ label .icon-user,label .icon-unlock-alt {
     padding: 0;
     margin: 0 auto;
 }
+/* Simbolo de herramienta y campana */
+.icon-cog, .icon-bell-o {
+    color: white;
+}
+
 
 /********************* Footer **************************/
 footer {
