@@ -34,15 +34,20 @@ header h1{
     background: var(--color2);
     padding-bottom: 1em;
     padding-bottom: 1em;
+    border-width: medium;
 }
 .login div{
     display: block;
     padding: .5em .2em .5em .5em;
 }
+.login input{
+    height: 2em;
+    border: 2px rgba(0, 0, 0, 0.57) solid;
+}
 .login input[type="submit"] {
     background-color: white;
     padding: .5em;
-    border: none;
+    box-shadow: .2em .2em rgba(0, 0, 0, 0.54);
 }
 
 /************************* Iconos **************************/
