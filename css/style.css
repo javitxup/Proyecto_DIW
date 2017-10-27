@@ -11,7 +11,6 @@ body {
 
 header {
     background: var(--color1);
-    margin: 0 auto;
     padding: 1em;
     text-align: center;
 }
@@ -19,12 +18,9 @@ header .icon-university{
     display: inline-block;
     color: white;
     font-size: 2em;
-    margin: 0 auto;
-    padding: 0;
 }
 header h1{
     display: inline-block;
-    margin: 0 auto;
 }
 
 /****** Diseño del formulario de registro ******/
@@ -34,7 +30,6 @@ header h1{
 }
 .login fieldset {
     background: var(--color2);
-    padding: 0;
     padding-bottom: 1em;
 }
 .login div{
@@ -47,6 +42,7 @@ header h1{
     border: none;
 }
 
+/************************* Iconos **************************/
 label .icon-user,label .icon-unlock-alt {
     display: inline-block;
     padding: 0;
