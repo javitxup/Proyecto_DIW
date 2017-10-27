@@ -30,6 +30,7 @@ header h1{
 /****** Diseño del formulario de registro ******/
 .login {
     text-align: center;
+    max-width: 20em;
 }
 .login fieldset {
     background: var(--color2);
@@ -38,7 +39,7 @@ header h1{
 }
 .login div{
     display: block;
-    padding: .5em .5em .5em 2em;
+    padding: .5em .2em .5em .5em;
 }
 .login input[type="submit"] {
     background-color: white;
