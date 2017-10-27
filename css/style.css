@@ -7,6 +7,7 @@
 /********* contenido **************/
 body {
     background: var(--color3);
+    text-align: center;
 }
 
 header {
@@ -27,9 +28,11 @@ header h1{
 .login {
     text-align: center;
     max-width: 20em;
+    margin-top: 5em;
 }
 .login fieldset {
     background: var(--color2);
+    padding-bottom: 1em;
     padding-bottom: 1em;
 }
 .login div{
@@ -47,4 +50,15 @@ label .icon-user,label .icon-unlock-alt {
     display: inline-block;
     padding: 0;
     margin: 0 auto;
+}
+
+/********************* Footer **************************/
+footer {
+    display: block;
+    background: rgba(0, 0, 0, 0.31);
+    position: fixed;
+    width: 100%;
+    font-size: .7em;
+    bottom: 0;
+    margin:auto;
 }
