@@ -33,7 +33,7 @@ header h1{
 .login fieldset {
     background: var(--color2);
     padding-bottom: 1em;
-    padding-bottom: 1em;
+    padding-top: 1em;
     border-width: medium;
 }
 .login div{
@@ -47,7 +47,13 @@ header h1{
 .login input[type="submit"] {
     background-color: white;
     padding: .5em;
+    padding-bottom: 1.5em;
     box-shadow: .2em .2em rgba(0, 0, 0, 0.54);
+    cursor: pointer;
+}
+.login input[type="submit"]:hover{
+    background-color: #eaeaea;
+    color: #585858;
 }
 
 /************************* Iconos **************************/
