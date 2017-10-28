@@ -21,6 +21,10 @@ body {
     font-weight: 600;
 }
 
+main {
+    margin-top: 7em;
+}
+
 /************* Header *****************/
 
 header {
