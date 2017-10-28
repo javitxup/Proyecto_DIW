@@ -1,44 +1,70 @@
 <!DOCTYPE html>
-<html lang="es">
+<html>
 
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" lang="es">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Ignacio Gómez&Javier Alonso">
+    
+    <script language="JavaScript">
+        var era;
+        var previo = null;
+
+        function uncheckRadio(rbutton) {
+            if (previo && previo != rbutton) {
+                previo.era = false;
+            }
+            if (rbutton.checked == true && rbutton.era == true) {
+                rbutton.checked = false;
+            }
+            rbutton.era = rbutton.checked;
+            previo = rbutton; 
+        }
+    </script>
+    <title>Alumno | Inicio</title>
+    <link href="css/reset.css" type="text/css" rel="stylesheet" media="screen">
+    <link href="css/style.css" type="text/css" rel="stylesheet" media="screen">
     <link href="https://file.myfontastic.com/SwbQMKYJhED7MkhzNiw2qF/icons.css" rel="stylesheet">
-    <title>Inicio-Alumno</title>
+    
 </head>
 
 <body>
 
     <header>
-        <div class="icon-university"></div>
-        <h1>Inicio-Alumno</h1>
+        <div class="icon-university">
+            <h1>Inicio-Alumno</h1>
+        </div>
+
         <nav>
-            <div calss="nav-superior">
-                <label for="notif" class="notif"><div class="icon-notif"></div></label>
-
-                <label for="confi" class="confi"><div class="icon-confi"></div></label>
-
-            </div>
-            <div calss="nav-inferior">
-                <label for="menu" class="menu"><div class="icon-menu"></div></label>
-                <input type="checkbox" name="menu" placeholder="Menu" id="menu">
-
-                <label for="enlace" class="enlace"><div class="enlace"></div></label>
-
-            </div>
-            <div class="memu">
-                <ul>
+            <div class="hiddmenu">
+                <input type="checkbox" id="btn-menu">
+                <label for="btn-menu">y</label>
+                <ul class="menu">
                     <li><a href="#">Módulo1</a></li>
                     <li><a href="#">Módulo2</a></li>
                     <li><a href="#">Módulo3</a></li>
                     <li><a href="#">Módulo4</a></li>
                 </ul>
-
             </div>
         </nav>
+        <div class="right-menu">
+            <input type="radio" id="btn-bell" name="right-menu" onclick="uncheckRadio(this)">
+            <label for="btn-bell">w</label>
+            <div id="notifications">
+            no tienes ninguna notificacion
+            </div>
+            <input type="radio" id="btn-data" name="right-menu" onclick="uncheckRadio(this)">
+            <label for="btn-data">e</label>
+            <ul class="settings">
+                <li><a href="#">Perfil</a></li>
+                <li><a href="#">Ayuda</a></li>
+                <li><a href="#">Soporte</a></li>
+                <li><a href="#">Salir</a></li>
+            </ul>
+        </div>
+
     </header>
+
     <main>
         <table border="1">
             <thead>
@@ -89,6 +115,7 @@
     <footer>
         &copy;2017
     </footer>
+    
 </body>
 
 </html>

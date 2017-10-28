@@ -5,6 +5,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Ignacio Gómez&Javier Alonso">
+    
+    <script type="text/javascript">
+        /**************** Según el usuario accede a la parte de profesor o a la de alumno *******************/
+            function loginIn(user){
+                
+                if (user == 'profesor'){
+                    // Si es profesor
+                    alert('profesor');
+                    document.location.replace('formularioProfesor.html');
+                }else if (user == 'alumno'){
+                    // Si es alumno
+                    alert('alumno');
+                    document.location.replace('formularioAlumno.html');
+                }else{
+                    // Si no es correcto
+                    alert('usuario no disponible');
+                }
+            }
+        </script>
+        
     <title>Inicio</title>
     <link href="css/reset.css" type="text/css" rel="stylesheet" media="screen">
     <link href="css/style.css" type="text/css" rel="stylesheet" media="screen">
@@ -13,7 +33,7 @@
 </head>
 
 <body>
-   <header>
+   <header class="index">
       <div class="icon-university"></div>
       <h1>Universidad</h1>
        <nav></nav>
@@ -21,7 +41,7 @@
     <main>
        
         <div class="login">
-            <form action="." method="post">
+            <form action="" method="post">
                 <fieldset>
                     <div>
                         <label for="user" class="user"><div class="icon-user"></div></label>
@@ -37,10 +57,11 @@
                         Recordar</label>
                         
                     </div>
-                    <input type="submit" name="summit" value="Acceder">
+                    <input type="submit" value="Acceder" onclick="loginIn(user.value)">
                 </fieldset>
             </form>
         </div>
+        
     </main>
     <footer>&copy; 2017, Ignacio & javitxu designs</footer>
 </body>

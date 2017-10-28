@@ -1,30 +1,131 @@
+@font-face{
+    font-family: "Augustus";
+    src:url("../fonts/AUGUSTUS.ttf");
+}
+@font-face{
+    font-family: "Lane";
+    src:url("../fonts/LANENAR_.ttf");
+}
+
 /******** Variables **********/
 :root{
     --color1:#aa0404;
     --color2:#CCCCCC;
     --color3:#FFFFFF; 
 }
-/********* contenido **************/
+/********* Contenido **************/
 body {
     background: var(--color3);
     text-align: center;
+    font-family: "Lane";
+    font-weight: 600;
 }
 
+/************* Header *****************/
+
 header {
+    display: flex;
     background: var(--color1);
-    padding: 1em;
-    text-align: center;
+    padding: 0;
+    text-align: left;
+    justify-content:space-between;
 }
+
+.index{
+    display: block;
+    text-align: center; 
+    text-transform: uppercase;
+}
+
+.index h1{
+    font-family: "Augustus";
+    font-weight: 500;
+    font-size: 2em;
+}
+
 header .icon-university{
     display: inline-block;
+    padding-top: .1em;
     color: white;
-    font-size: 2em;
+    font-size: 3em;
 }
 header h1{
     display: inline-block;
+    font-family: "Augustus";
+    font-size: 1em; 
+}
+
+/***************** Menú ***********************/
+
+.hiddmenu #btn-menu,.hiddmenu .menu{
+   display: none;
+}
+
+.hiddmenu .menu {
+    background: rgba(255, 255, 255, 0.7);
+    padding: .5em .5em .5em 0;
+    border: .2em var(--color2) solid;
+}
+
+.hiddmenu {
+    position: absolute;
+    top: 4em; /* para que quede debajo del menú */
+    left: 0;
+}
+
+.hiddmenu label {
+    font-family: "untitled-font-1";
+    content: "y";
+    font-size: 2em;
+    cursor: pointer;
+    margin-left: .1em;
+}
+
+.hiddmenu #btn-menu:checked ~ .menu{
+    display: block;
+}
+
+/****** right-menu *****/
+.right-menu {
+    display: inline;
+    margin-top: 1em;
+    margin-right: 1em;
+}
+.right-menu label{
+    display: inline;
+    font-size: 2em;
+    font-family: "untitled-font-1";
+    color: white;
+    cursor: pointer;
+}
+
+.right-menu #notifications{
+    background: rgba(255, 255, 255, 0.7);
+    width: 6em;
+    right: .5em;
+    border: .2em var(--color2) solid;
+    text-align: center;
+}
+
+.right-menu .settings {
+    background: rgba(255, 255, 255, 0.7);
+    text-align: right;
+    right: .2em;
+    padding: 0 .5em;
+    border: .05em var(--color2) solid;
+}
+
+.right-menu #notifications, .right-menu .settings, #btn-bell, #btn-data{
+    display: none;
+}
+
+.right-menu #btn-bell:checked ~ #notifications, .right-menu #btn-data:checked ~ .settings {
+    position: absolute;
+    display: block;
 }
 
 /****** Diseño del formulario de registro ******/
+
 .login {
     text-align: center;
     max-width: 20em;
@@ -43,7 +144,14 @@ header h1{
 .login input{
     height: 2em;
     border: 2px rgba(0, 0, 0, 0.57) solid;
+    font-family: "Lane";
+    font-weight: 600;
 }
+
+.login input[type="text"], input[type="password"] {
+    width: 10em;
+}
+
 .login input[type="submit"] {
     background-color: white;
     padding: .5em;
@@ -62,11 +170,15 @@ label .icon-user,label .icon-unlock-alt {
     padding: 0;
     margin: 0 auto;
 }
-/* Simbolo de herramienta y campana */
-.icon-cog, .icon-bell-o {
-    color: white;
-}
 
+/*
+Simbolos e iconos:
+font-family: "untitled-font-1"
+.icon-user
+.icon-unlock-alt
+.icon-cog
+.icon-bell-o
+*/
 
 /********************* Footer **************************/
 footer {
