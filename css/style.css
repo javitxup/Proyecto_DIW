@@ -14,23 +14,27 @@
     --color3:#FFFFFF;
     --color2_1:#b1b1b1;
 }
-/********* Contenido **************/
+/********* Content **************/
 body {
     background: var(--color3);
     text-align: center;
+}
+
+ * {
     font-family: "Lane";
     font-weight: 600;
 }
 
 main {
-    margin: 7em 5em;
+    margin: 7em 0em;
 }
 
-/********* Diseño de tabla ***********/
+/********* Table layout ***********/
 
 table {
     border:.1em #777 solid;
     border-collapse: collapse;
+    width: 100vw;
 }
 
 td, td {
@@ -43,19 +47,25 @@ td, th {
 
 th {
     background: var(--color2_1);
+    text-transform: uppercase;
 }
 
 tr:nth-of-type(2n-1) {
     background: var(--color2);
 }
 
-/* Tabla de profesor */
-#profesor td:nth-of-type(1) {
-    min-width: 10em;
+/********* Bottom buttons *********/
+
+.bottom-buttons{
+    display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+    margin-top: 5vh;
 }
 
-#profesor td:nth-of-type(2) {
-    min-width: 20em;
+.bottom-buttons input {
+    width: 9em;
+    margin: .5em;
 }
 
 /************* Header *****************/
@@ -84,7 +94,7 @@ header .icon-university{
     display: inline-block;
     padding-top: .1em;
     color: white;
-    font-size: 3em;
+    font-size: 2em;
 }
 header h1{
     display: inline-block;
@@ -92,7 +102,7 @@ header h1{
     font-size: 1em; 
 }
 
-/***************** Menú ***********************/
+/***************** Menu ***********************/
 
 
 .hiddmenu #btn-menu,.hiddmenu .menu{
@@ -105,13 +115,13 @@ header h1{
     border: .2em var(--color2) solid;
 }
 
-.hiddmenu li:hover, .right-menu li:hover{
+.hiddmenu li:hover, .right-menu li:hover, .hiddmenu .current{
     background: var(--color2);
 }
 
 .hiddmenu, .breadcums {
     position: absolute;
-    top: 4em; /* para que quede debajo del menú */
+    top: 3em; /* para que quede debajo del menú */
     left: 0;
 }
 
@@ -142,7 +152,7 @@ header h1{
 }
 
 
-/** Breadcums**/
+/** Breadcums **/
 .breadcums {
     margin-left: 3em;
 }
@@ -176,11 +186,11 @@ header h1{
     text-decoration: underline;
 }
 
-/****** right-menu *****/
+/****** top-right-menu *****/
 .right-menu {
     display: inline;
-    margin-top: 1em;
-    margin-right: 1em;
+    margin-top: .3em;
+    margin-right: 0em;
 }
 
 .right-menu label{
@@ -189,7 +199,7 @@ header h1{
     font-family: "untitled-font-1";
     color: white;
     cursor: pointer;
-    padding: .3em;
+    padding: .1em;
     margin-left: .1em;
 }
 
@@ -224,7 +234,7 @@ header h1{
     transition: 1s all;
 }
 
-/****** Diseño del formulario de login ******/
+/****** Login form design ******/
 
 .login {
     text-align: center;
@@ -252,19 +262,19 @@ header h1{
     width: 10em;
 }
 
-.login input[type="submit"] {
+input[type="submit"] {
     background-color: white;
     padding: .5em;
     padding-bottom: 1.5em;
     box-shadow: .2em .2em rgba(0, 0, 0, 0.54);
     cursor: pointer;
 }
-.login input[type="submit"]:hover{
+input[type="submit"]:hover{
     background-color: #eaeaea;
     color: #585858;
 }
 
-/************************* Iconos **************************/
+/************************* Icons **************************/
 label .icon-user,label .icon-unlock-alt {
     display: inline-block;
     padding: 0;
@@ -272,7 +282,7 @@ label .icon-user,label .icon-unlock-alt {
 }
 
 /*
-Simbolos e iconos:
+Symbols and icons:
 font-family: "untitled-font-1"
 .icon-user
 .icon-unlock-alt
@@ -289,4 +299,55 @@ footer {
     font-size: .7em;
     bottom: 0;
     margin:auto;
+}
+
+/************************** Min width 768px Screen *********************************/
+@media (min-width: 768px){
+    
+main {
+    margin: 7em 5em;
+}
+    
+header .icon-university{
+    display: inline-block;
+    padding-top: .1em;
+    color: white;
+    font-size: 3em;
+}
+/* teacher's table */
+    
+table {
+    width: 0;
+    max-height: 20vh;
+    overflow-y: scroll;
+}
+#profesor td:nth-of-type(1) {
+    min-width: 10em;
+}
+
+#profesor td:nth-of-type(2) {
+    min-width: 20em;
+}
+    
+/****** Menu ******/
+.hiddmenu, .breadcums {
+    top: 4em; /* para que quede debajo del menú */
+}
+    
+/****** top-right-menu *****/
+.right-menu {
+    display: inline;
+    margin-top: 1em;
+    margin-right: 1em;
+}
+
+.right-menu label{
+    padding: .3em;
+}
+    
+/*********** Bottom buttons ***********/
+
+.bottom-buttons{
+    margin-top: 20vh;
+}
 }

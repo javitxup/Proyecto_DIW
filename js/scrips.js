@@ -26,3 +26,7 @@ var previo = null;
             rbutton.era = rbutton.checked;
             previo = rbutton; 
         }
+
+function goTo (destino){
+    document.location.assign(destino);
+}
