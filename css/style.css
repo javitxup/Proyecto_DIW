@@ -11,7 +11,8 @@
 :root{
     --color1:#aa0404;
     --color2:#CCCCCC;
-    --color3:#FFFFFF; 
+    --color3:#FFFFFF;
+    --color2_1:#b1b1b1;
 }
 /********* Contenido **************/
 body {
@@ -22,7 +23,39 @@ body {
 }
 
 main {
-    margin-top: 7em;
+    margin: 7em 5em;
+}
+
+/********* Diseño de tabla ***********/
+
+table {
+    border:.1em #777 solid;
+    border-collapse: collapse;
+}
+
+td, td {
+   padding:.5em; 
+}
+
+td, th {
+    border-left:.1em #777 solid;
+}
+
+th {
+    background: var(--color2_1);
+}
+
+tr:nth-of-type(2n-1) {
+    background: var(--color2);
+}
+
+/* Tabla de profesor */
+#profesor td:nth-of-type(1) {
+    min-width: 10em;
+}
+
+#profesor td:nth-of-type(2) {
+    min-width: 20em;
 }
 
 /************* Header *****************/
@@ -61,32 +94,86 @@ header h1{
 
 /***************** Menú ***********************/
 
+
 .hiddmenu #btn-menu,.hiddmenu .menu{
    display: none;
 }
 
 .hiddmenu .menu {
     background: rgba(255, 255, 255, 0.7);
-    padding: .5em .5em .5em 0;
+    padding: .5em .2em .5em 0;
     border: .2em var(--color2) solid;
 }
 
-.hiddmenu {
+.hiddmenu li:hover, .right-menu li:hover{
+    background: var(--color2);
+}
+
+.hiddmenu, .breadcums {
     position: absolute;
     top: 4em; /* para que quede debajo del menú */
     left: 0;
 }
 
-.hiddmenu label {
+.hiddmenu label, .hiddmenu #btn-menu:checked {
     font-family: "untitled-font-1";
-    content: "y";
     font-size: 2em;
     cursor: pointer;
     margin-left: .1em;
 }
+.hiddmenu label:before{
+    content:"y";
+}
+
+.hiddmenu #btn-menu:checked ~ label, .hiddmenu #btn-menu:hover ~ label{
+    color: var(--color2);
+}
+
+.hiddmenu #btn-menu:checked ~ label:before {
+    content:"z";
+}
 
 .hiddmenu #btn-menu:checked ~ .menu{
     display: block;
+}
+
+.hiddmenu li {
+    padding: .2em .5em;
+}
+
+
+/** Breadcums**/
+.breadcums {
+    margin-left: 3em;
+}
+
+.breadcums li{
+    position: relative;
+    display: inline-block;
+    padding-right: 1em;
+    margin-top: .5em;
+}
+
+.breadcums li:after{
+    position: absolute;
+    content:"b";
+    font-family: "untitled-font-1";
+    font-weight: 100;
+    margin-top: .2em;
+}
+
+.breadcums li:last-of-type:after {
+    content:"";
+}
+
+.breadcums a {
+    color: #009bd0;
+    padding: .2em;
+}
+
+.breadcums a:hover {
+    background: rgba(0, 0, 0, 0.05);
+    text-decoration: underline;
 }
 
 /****** right-menu *****/
@@ -95,17 +182,20 @@ header h1{
     margin-top: 1em;
     margin-right: 1em;
 }
+
 .right-menu label{
     display: inline;
     font-size: 2em;
     font-family: "untitled-font-1";
     color: white;
     cursor: pointer;
+    padding: .3em;
+    margin-left: .1em;
 }
 
 .right-menu #notifications{
     background: rgba(255, 255, 255, 0.7);
-    width: 6em;
+    width: 7em;
     right: .5em;
     border: .2em var(--color2) solid;
     text-align: center;
@@ -115,7 +205,7 @@ header h1{
     background: rgba(255, 255, 255, 0.7);
     text-align: right;
     right: .2em;
-    padding: 0 .5em;
+    padding:.1em;
     border: .05em var(--color2) solid;
 }
 
@@ -128,7 +218,13 @@ header h1{
     display: block;
 }
 
-/****** Diseño del formulario de registro ******/
+.right-menu #btn-bell:hover ~ label:nth-of-type(1), .right-menu #btn-data:hover ~ label, .right-menu #btn-bell:checked ~ label:nth-of-type(1), .right-menu #btn-data:checked ~ label {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 2em;
+    transition: 1s all;
+}
+
+/****** Diseño del formulario de login ******/
 
 .login {
     text-align: center;
