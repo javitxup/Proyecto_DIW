@@ -25,14 +25,14 @@
                 <input type="checkbox" id="btn-menu">
                 <label for="btn-menu"></label>
                 <ul class="menu">
-                    <li class="current"><a href="#">Módulo1</a></li>
+                    <li class="current"><a href="./formularioProfesor.html">Módulo1</a></li>
                     <li><a href="#">Módulo2</a></li>
                     <li><a href="#">Módulo3</a></li>
                     <li><a href="#">Módulo4</a></li>
                 </ul>
             </div>
             <div class="breadcums">
-                <ul><li><a href="">Profesor</a></li><li><a href="./formularioProfesor.html">Módulo 1</a></li><li>Ver Notas</li></ul>
+                <ul><li><a href="./formularioProfesor.html">Profesor</a></li><li>Perfil</li></ul>
         </div>
         </nav>
         <div class="right-menu">
@@ -52,23 +52,17 @@
         </div>
     </header>
     <main>
-        <table id="profesor">
-            <tr>
-                <th>Nombre</th>
-                <th>nota media</th>
-            </tr>
-            <tr><td>Giacomo</td><td>2</td></tr>
-            <tr><td>Marco</td><td>7.5</td></tr>
-            <tr><td>Mariah</td><td>5.9</td></tr>
-            <tr><td>Valerie</td><td>6.2</td></tr>
-            <tr><td>Guido</td><td>9.7</td></tr>
-        </table>
-        <div class="bottom-buttons b1">
-            <input type="submit" value="Ver notas" onclick="goTo('Profesor_notas.html')">
-            <input type="submit" value="Gestionar notas" onclick="goTo('Profesor_gestionarNotas.html')">
-            <input type="submit" value="Ver trabajos" onclick="goTo('Profesor_trabajos.html')">
-            <input type="submit" value="Gestionar trabajos" onclick="goTo('Profesor_gestionarTrabajos.html')">
-        </div>
+        <article class="profile">
+            <h1>Perfil</h1>
+            <div class="photo"><img src="" alt="Foto de Perfil"/></div>
+            <section>
+                <p><b>Nombre:</b> Profesor.</p>
+                <p><b>Asignaturas:</b> Modulo 1, Modulo 2, Modulo 3, Modulo 4.</p>
+                <p><b>Número de alumnos:</b> 53.</p>
+                <p><b>Correo:</b> profesor@universidad.es.</p>
+                <p><b>Telefono:</b> 615 54 21 18.</p>
+            </section>
+        </article>
     </main>
    <footer>&copy; 2017, Ignacio & javitxu designs</footer>
 </body>

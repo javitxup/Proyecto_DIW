@@ -32,7 +32,7 @@
                 </ul>
             </div>
             <div class="breadcums">
-                <ul><li><a href="">Profesor</a></li><li><a href="./formularioProfesor.html">Módulo 1</a></li><li>Ver Notas</li></ul>
+                <ul><li><a href="">Profesor</a></li><li><a href="./formularioProfesor.html">Módulo 1</a></li><li>Gestionar Trabajos</li></ul>
         </div>
         </nav>
         <div class="right-menu">
@@ -52,18 +52,21 @@
         </div>
     </header>
     <main>
-        <table id="profesor">
+        <table id="profesor-2">
             <tr>
                 <th>Nombre</th>
-                <th>nota media</th>
+                <th>Trabajo 1</th>
+                <th>Trabajo 2</th>
+                <th>Trabajo 3</th>
+                <th>Trabajo 4</th>
             </tr>
-            <tr><td>Giacomo</td><td>2</td></tr>
-            <tr><td>Marco</td><td>7.5</td></tr>
-            <tr><td>Mariah</td><td>5.9</td></tr>
-            <tr><td>Valerie</td><td>6.2</td></tr>
-            <tr><td>Guido</td><td>9.7</td></tr>
+            <tr><td>Giacomo</td><td>2</td><td>1</td><td>0</td><td id="open">Entrega abierta</td></tr>
+            <tr><td>Marco</td><td>5</td><td>6</td><td>6</td><td id="open">Entrega abierta</td></tr>
+            <tr><td>Mariah</td><td>8</td><td>5</td><td>7</td><td id="open">Entrega abierta</td></tr>
+            <tr><td>Valerie</td><td>5</td><td>7</td><td>4</td><td id="open">Entrega abierta</td></tr>
+            <tr><td>Guido</td><td>10</td><td>9</td><td>9</td><td id="open">Entrega abierta</td></tr>
         </table>
-        <div class="bottom-buttons b1">
+        <div class="bottom-buttons b4">
             <input type="submit" value="Ver notas" onclick="goTo('Profesor_notas.html')">
             <input type="submit" value="Gestionar notas" onclick="goTo('Profesor_gestionarNotas.html')">
             <input type="submit" value="Ver trabajos" onclick="goTo('Profesor_trabajos.html')">

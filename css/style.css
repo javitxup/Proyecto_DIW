@@ -54,6 +54,11 @@ tr:nth-of-type(2n-1) {
     background: var(--color2);
 }
 
+#open {
+    color: var(--color1);
+    font-style: italic;
+}
+
 /********* Bottom buttons *********/
 
 .bottom-buttons{
@@ -66,6 +71,10 @@ tr:nth-of-type(2n-1) {
 .bottom-buttons input {
     width: 9em;
     margin: .5em;
+}
+
+.bottom-buttons input {
+    background-color: var(--color2);
 }
 
 /************* Header *****************/
@@ -269,7 +278,7 @@ input[type="submit"] {
     box-shadow: .2em .2em rgba(0, 0, 0, 0.54);
     cursor: pointer;
 }
-input[type="submit"]:hover{
+input[type="submit"]:hover , .b1 input:nth-of-type(1), .b2 input:nth-of-type(2), .b3 input:nth-of-type(3), .b4 input:nth-of-type(4) {
     background-color: #eaeaea;
     color: #585858;
 }
@@ -301,7 +310,42 @@ footer {
     margin:auto;
 }
 
+/*********** Perfil *************/
+.profile {
+    padding: 1em .3em 2em;
+    border: .05em var(--color2) solid;
+}
+
+.profile h1 {
+    text-transform: uppercase;
+    border-bottom: .05em var(--color2) solid;
+    margin-bottom: .3em;
+}
+
+.profile .photo {
+    float: left;
+    margin-right: .5em;
+    margin-bottom: 1em;
+    border-bottom: .05em var(--color2) solid;
+}
+
+.profile img {
+    background: var(--color2_1);
+    width: 5em;
+    height: 6em;
+}
+
+.profile section{
+    text-align: left;
+}
+
+.profile b{
+    color: var(--color1);
+}
+
 /************************** Min width 768px Screen *********************************/
+/***********************************************************************************/
+
 @media (min-width: 768px){
     
 main {
@@ -321,7 +365,7 @@ table {
     max-height: 20vh;
     overflow-y: scroll;
 }
-#profesor td:nth-of-type(1) {
+#profesor td:nth-of-type(1), #profesor-2 td {
     min-width: 10em;
 }
 
@@ -331,7 +375,7 @@ table {
     
 /****** Menu ******/
 .hiddmenu, .breadcums {
-    top: 4em; /* para que quede debajo del menú */
+    top: 4.3em; /* para que quede debajo del menú */
 }
     
 /****** top-right-menu *****/
