@@ -7,9 +7,11 @@
                 }else if (user == 'alumno' || user == 'Alumno'){
                     // Si es alumno
                     document.location.replace('formularioAlumno.html');
+                }else if (user == ''){
+                    document.getElementById('user').style = 'background-color: rgba(255, 0, 0, 0.1);border-color:var(--color1);';
                 }else{
                     // Si no es correcto
-                    alert('El usuario no existe');
+                    alert('El usuario no existe, (introduce alumno o profesor)');
                 }
             }
 
