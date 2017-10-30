@@ -5,14 +5,14 @@
     <meta charset="UTF-8" lang="es">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Ignacio Gómez&Javier Alonso">
-    
-    <script src="js/scrips.js"></script> 
-    
+
+    <script src="js/scrips.js"></script>
+
     <title>Alumno | Inicio</title>
     <link href="css/reset.css" type="text/css" rel="stylesheet" media="screen">
     <link href="css/style.css" type="text/css" rel="stylesheet" media="screen">
     <link href="https://file.myfontastic.com/SwbQMKYJhED7MkhzNiw2qF/icons.css" rel="stylesheet">
-    
+
 </head>
 
 <body>
@@ -33,19 +33,25 @@
                     <li><a href="#">Módulo4</a></li>
                 </ul>
             </div>
+            <div class="breadcums">
+                <ul>
+                    <li><a href="">Alumno</a></li>
+                    <li>Módulo 1</li>
+                </ul>
+            </div>
         </nav>
         <div class="right-menu">
             <input type="radio" id="btn-bell" name="right-menu" onclick="uncheckRadio(this)">
             <label for="btn-bell">w</label>
             <div id="notifications">
-            no tienes ninguna notificacion
+                no tienes ninguna notificacion
             </div>
             <input type="radio" id="btn-data" name="right-menu" onclick="uncheckRadio(this)">
             <label for="btn-data">e</label>
             <ul class="settings">
-                <li><a href="#">Perfil</a></li>
-                <li><a href="#">Ayuda</a></li>
-                <li><a href="#">Soporte</a></li>
+                <li><a href="Alumno_profile.html">Perfil</a></li>
+                <li><a href="Alumno_Ayuda.html">Ayuda</a></li>
+                <li><a href="Alumno_soporte.html">Soporte</a></li>
                 <li><a href="./">Salir</a></li>
             </ul>
         </div>
@@ -58,39 +64,59 @@
                 <th>Examen/Tarea</th>
                 <th>Nota media</th>
                 <th>Observaciones</th>
+                <th>Estado</th>
             </thead>
             <tbody>
                 <tr>
-                    <td>Módulo1</td>
+                    <td>Examen teórico</td>
                     <td>6.4</td>
                     <td></td>
+                    <td>Corregido</td>
                 </tr>
                 <tr>
-                    <td>Módulo2</td>
-                    <td>7.1</td>
+                    <td>Práctica DNS</td>
                     <td></td>
+                    <td></td>
+                    <td>A realizar</td>
                 </tr>
                 <tr>
                     <td>Examen práctico</td>
                     <td>4.8</td>
                     <td>Recuperación la semana que viene</td>
+                    <td>Corregido</td>
                 </tr>
                 <tr>
                     <td>Práctica PHP</td>
                     <td>0</td>
-                    <td>entregado fuera de plazo</td>
+                    <td>Entregado fuera de plazo</td>
+                    <td>No entregado</td>
+                </tr>
+                <tr>
+                    <td>Practica d eJavaScript</td>
+                    <td></td>
+                    <td></td>
+                    <td>Entregado</td>
                 </tr>
                 <tr>
                     <td></td>
                     <td></td>
                     <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
                 </tr>
                 <tr>
                     <td></td>
                     <td></td>
                     <td></td>
+                    <td></td>
                 </tr>
                 <tr>
+                    <td></td>
                     <td></td>
                     <td></td>
                     <td></td>
@@ -98,9 +124,13 @@
             </tbody>
 
         </table>
+        <div class="bottom-buttons">
+            <input type="submit" value="Entregar práctica">
+
+        </div>
     </main>
     <footer>&copy; 2017, Ignacio & javitxu designs</footer>
-    
+
 </body>
 
 </html>
