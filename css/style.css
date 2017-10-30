@@ -271,18 +271,50 @@ header h1{
     width: 10em;
 }
 
-input[type="submit"] {
+input[type="submit"], input[type="reset"],input[type="button"] {
     background-color: white;
     padding: .5em;
     padding-bottom: 1.5em;
     box-shadow: .2em .2em rgba(0, 0, 0, 0.54);
     cursor: pointer;
 }
-input[type="submit"]:hover , .b1 input:nth-of-type(1), .b2 input:nth-of-type(2), .b3 input:nth-of-type(3), .b4 input:nth-of-type(4) {
+input[type="submit"]:hover , input[type="reset"]:hover,input[type="button"]:hover, .b1 input:nth-of-type(1), .b2 input:nth-of-type(2), .b3 input:nth-of-type(3), .b4 input:nth-of-type(4) {
     background-color: #eaeaea;
     color: #585858;
 }
 
+/****************** Ingresar nota **********************/
+#addNota {
+    background: rgba(255, 255, 255, 0.56);
+    position: absolute;
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    top:3em;
+    z-index: 101;
+    text-align: center;
+    margin: 5em .2em;
+}
+#addNota .buttons-form{
+    display: block;
+    padding-top: 1em;
+}
+#addNota div{
+    display: table-row;
+    margin-left: 1em;
+}
+#addNota label{
+    padding-right: 1em;
+}
+
+
+#addNota textarea {
+    vertical-align: top;
+}
+
+#addNota label, #addNota input, #addNota textarea, #addNota p {
+    display:table-cell;
+}
 /************************* Icons **************************/
 label .icon-user,label .icon-unlock-alt {
     display: inline-block;

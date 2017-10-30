@@ -14,7 +14,7 @@
     <link href="https://file.myfontastic.com/SwbQMKYJhED7MkhzNiw2qF/icons.css" rel="stylesheet">
 </head>
 
-<body>
+<body onload="obtenAlumno('hola')">
     <header>
         <div class="icon-university">
             <h1>Profesor</h1>
@@ -52,20 +52,65 @@
         </div>
     </header>
     <main>
-        <table id="profesor-2">
-           <tr>
-                <th>Nombre</th>
-                <th>1º Evaluación</th>
-                <th>2ª Evaluación</th>
-                <th>3ª Evaluación</th>
-            </tr>
-            <tr><td>Giacomo</td><td>2</td><td>3</td><td>1</td></tr>
-            <tr><td>Marco</td><td>7.5</td><td>6.9</td><td>7.3</td></tr>
-            <tr><td>Mariah</td><td>5.9</td><td>6.2</td><td>5.2</td></tr>
-            <tr><td>Valerie</td><td>6.2</td><td>6</td><td>5.3</td></tr>
-            <tr><td>Guido</td><td>9.7</td><td>8.6</td><td>9.2</td></tr>
-            
-        </table>
+        <section id="addNota">
+            <form method="post">
+              <div>
+                <label for="nom">Nombre de practica:</label>
+                <input name="nom" type="text">
+                </div>
+                <br>
+                <div><p>Alumno</p><p>Nota</p></div>
+                <div>
+                    <label for="alu1">Giacomo</label>
+                    <input name="alu1" type="number" min="0" max="10">&nbsp;
+                    <textarea name="descript" cols="15" rows="2" placeholder="Comentarios"></textarea>
+                </div>
+                <div>
+                    <label for="alu2">Marco</label>
+                    <input name="alu2" type="number" min="0" max="10">&nbsp;
+                    <textarea name="descript" cols="15" rows="2" placeholder="Comentarios"></textarea>
+                </div>
+                <div>
+                    <label for="alu3">Mariah</label>
+                    <input name="alu3" type="number" min="0" max="10">&nbsp;
+                    <textarea name="descript" cols="15" rows="2" placeholder="Comentarios"></textarea>
+                </div>
+                <div>
+                    <label for="alu4">Valerie</label>
+                    <input name="alu4" type="number" min="0" max="10">&nbsp;
+                    <textarea name="descript" cols="15" rows="2" placeholder="Comentarios"></textarea>
+                </div>
+                <div>
+                    <label for="alu5">Guido</label>
+                    <input name="alu5" type="number" min="0" max="10">&nbsp;
+                    <textarea name="descript" cols="15" rows="2" placeholder="Comentarios"></textarea>
+                </div>
+                <div class="buttons-form">
+                <input type="submit" onclick="agregaNota('oculta')" value="Añadir">
+                <input type="reset">
+                <input type="button" onclick="agregaNota('oculta')" value="Cancelar">
+                </div>
+            </form>
+        </section>
+        <section class="gestionar">
+            <select name="alumno" onchange="obtenAlumno(this.value)" >
+                <option>Selecciona practica</option>
+                <option>Nota 1</option>
+                <option>Nota 2</option>
+                <option>Nota 3</option>
+                <option>Nota 4</option>
+                <option>Nota 5</option>
+                <option>Añadir practica</option>
+            </select>
+            <table>
+                <thead>
+                <tr><th>Giacomo</th><th>Marco</th><th>Mariah</th><th>Valerie</th><th>Guido</th></tr>
+                </thead>
+                <tbody id="notasAlum">
+                    
+                </tbody>
+            </table>
+        </section>
         <div class="bottom-buttons b2">
             <input type="submit" value="Ver notas" onclick="goTo('Profesor_notas.html')">
             <input type="submit" value="Gestionar notas" onclick="goTo('Profesor_gestionarNotas.html')">
