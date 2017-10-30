@@ -69,3 +69,9 @@ function agregaNota(hacer){
         document.getElementById('addNota').style = 'display:none;';
     }
 }
+/* no funciona
+
+function addNota(){
+    nots = '<tr><td>'+document.getElementById('alu1').value;+'</td><td>'+document.getElementById('alu2').value;+'</td><td>'+document.getElementById('alu3').value;+'</td><td>'+document.getElementById('alu4').value;+'</td><td>'+document.getElementById('alu5').value;+'</td></tr>';
+    document.getElementById('notasAlum').innerHTML = nots;
+}*/

@@ -53,7 +53,7 @@
     </header>
     <main>
         <section id="addNota">
-            <form method="post">
+            <form><!-- Sin method ni action para que no intente mandar los datos -->
               <div>
                 <label for="nom">Nombre de practica:</label>
                 <input name="nom" type="text">
@@ -62,38 +62,38 @@
                 <div><p>Alumno</p><p>Nota</p></div>
                 <div>
                     <label for="alu1">Giacomo</label>
-                    <input name="alu1" type="number" min="0" max="10">&nbsp;
+                    <input name="alu1" type="number" min="0" max="10" id="alu1">&nbsp;
                     <textarea name="descript" cols="15" rows="2" placeholder="Comentarios"></textarea>
                 </div>
                 <div>
                     <label for="alu2">Marco</label>
-                    <input name="alu2" type="number" min="0" max="10">&nbsp;
+                    <input name="alu2" type="number" min="0" max="10" id="alu2">&nbsp;
                     <textarea name="descript" cols="15" rows="2" placeholder="Comentarios"></textarea>
                 </div>
                 <div>
                     <label for="alu3">Mariah</label>
-                    <input name="alu3" type="number" min="0" max="10">&nbsp;
+                    <input name="alu3" type="number" min="0" max="10" id="alu3">&nbsp;
                     <textarea name="descript" cols="15" rows="2" placeholder="Comentarios"></textarea>
                 </div>
                 <div>
                     <label for="alu4">Valerie</label>
-                    <input name="alu4" type="number" min="0" max="10">&nbsp;
+                    <input name="alu4" type="number" min="0" max="10" id="alu4">&nbsp;
                     <textarea name="descript" cols="15" rows="2" placeholder="Comentarios"></textarea>
                 </div>
                 <div>
                     <label for="alu5">Guido</label>
-                    <input name="alu5" type="number" min="0" max="10">&nbsp;
+                    <input name="alu5" type="number" min="0" max="10" id="alu5">&nbsp;
                     <textarea name="descript" cols="15" rows="2" placeholder="Comentarios"></textarea>
                 </div>
                 <div class="buttons-form">
-                <input type="submit" onclick="agregaNota('oculta')" value="Añadir">
+                <input type="submit" onclick="agregaNota('oculta');addNota()" value="Añadir">
                 <input type="reset">
                 <input type="button" onclick="agregaNota('oculta')" value="Cancelar">
                 </div>
             </form>
         </section>
         <section class="gestionar">
-            <select name="alumno" onchange="obtenAlumno(this.value)" >
+            <select name="alumno" onchange="obtenAlumno(this.value)" id="opciones">
                 <option>Selecciona practica</option>
                 <option>Nota 1</option>
                 <option>Nota 2</option>
