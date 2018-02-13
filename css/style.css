@@ -232,12 +232,12 @@ header h1{
     display: none;
 }
 
-.right-menu #btn-bell:checked ~ #notifications, .right-menu #btn-data:checked ~ .settings {
+.right-menu #btn-bell:active ~ #notifications, .right-menu #btn-data:active ~ .settings, .right-menu #btn-bell:hover ~ #notifications, .right-menu #btn-data:hover ~ .settings, .right-menu #notifications:hover, .right-menu .settings:hover{
     position: absolute;
     display: block;
 }
 
-.right-menu #btn-bell:hover ~ label:nth-of-type(1), .right-menu #btn-data:hover ~ label, .right-menu #btn-bell:checked ~ label:nth-of-type(1), .right-menu #btn-data:checked ~ label {
+.right-menu #btn-bell:hover ~ label:nth-of-type(1), .right-menu #btn-data:hover ~ label{
     background: rgba(0, 0, 0, 0.2);
     border-radius: 2em;
     transition: 1s all;
